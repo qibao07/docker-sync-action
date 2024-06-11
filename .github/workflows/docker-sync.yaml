@@ -9,11 +9,12 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
-    - name: Set up skopeo
-      uses: warjiang/setup-skopeo@latest
-      with:
-        version: latest
     - name: Sync images
-      run: |
-        chmod +x ./start.sh
-        ./start.sh
+      env:
+        ALIYUN_REGISTRY_USER: ${{ secrets.ALIYUN_REGISTRY_USER }}
+        ALIYUN_REGISTRY_PASSWORD: ${{ secrets.ALIYUN_REGISTRY_PASSWORD }}
+        ALIYUN_REGISTRY: ${{ secrets.ALIYUN_REGISTRY }}
+        ALIYUN_NAME_SPACE: ${{ secrets.ALIYUN_NAME_SPACE }}
+      uses: qibao07/skopeo-action@main
+      with:
+        cmd: chmod +x ./start.sh && ./start.sh

@@ -2,7 +2,7 @@
 
 ## 使用
 
-获取[阿里容器镜像服务](https://cr.console.aliyun.com/)参数，配置到action保密变量中.
+获取[阿里容器镜像服务](https://cr.console.aliyun.com/)参数，配置到action保密变量中。
 
 * 用户名：${{ secrets.ALIYUN_REGISTRY_USER }}
 * 密码：${{ secrets.ALIYUN_REGISTRY_PASSWORD}}

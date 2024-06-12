@@ -1,1 +1,3 @@
 metacubex/mihomo:latest
+nginx:latest
+gitea/gitea:latest

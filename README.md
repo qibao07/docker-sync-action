@@ -13,6 +13,13 @@
 
 需要同步的镜像填写到`images.txt`即可，默认每日周一同步一次，也可以手动触发。
 
+```
+# 强制同步
+hello-world:latest force
+# 默认同步后跳过
+metacubex/mihomo:latest
+```
+
 ## 参考
 
 [tech-shrimp/docker_image_pusher](https://github.com/tech-shrimp/docker_image_pusher)

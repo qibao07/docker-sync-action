@@ -1,4 +1,5 @@
-metacubex/mihomo:latest force 
+#hello-world:latest force
+metacubex/mihomo:latest
 nginx:latest
 gitea/gitea:latest
 haishanh/yacd:latest

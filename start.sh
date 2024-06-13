@@ -7,6 +7,7 @@ mkdir -p finish.images
 while IFS= read -r line
 do
   [[ -z "$line" ]] && continue
+  [[ $line =~ ^# ]] && continue
   force=$(echo "$line" | awk '{print $2}')
   image=$(echo "$line" | awk '{print $1}')
   image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')

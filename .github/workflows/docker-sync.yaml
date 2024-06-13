@@ -11,6 +11,11 @@ jobs:
     steps:
     - name: Checkout Code
       uses: actions/checkout@v4
+    - name: Cache finish images
+      uses: actions/cache@v4
+      with:
+        path: finish.images
+        key: finish.images
     - name: Sync images
       env:
         ALIYUN_REGISTRY_USER: ${{ secrets.ALIYUN_REGISTRY_USER }}

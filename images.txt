@@ -3,3 +3,4 @@ metacubex/mihomo:latest
 nginx:latest
 gitea/gitea:latest
 haishanh/yacd:latest
+mariadb:10.11.8

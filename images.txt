@@ -4,3 +4,4 @@ nginx:latest
 gitea/gitea:latest
 haishanh/yacd:latest
 mariadb:10.11.8
+nextcloud:27.1.11

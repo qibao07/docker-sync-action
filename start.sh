@@ -1,5 +1,7 @@
 #!/bin/bash
 
+force_image=$1
+
 skopeo --version
 
 mkdir -p finish.images
@@ -12,7 +14,7 @@ do
   image=$(echo "$line" | awk '{print $1}')
   image_name_tag=$(echo "$image" | awk -F'/' '{print $NF}')
   image_file_name="finish.images/$(echo "$image" | sed 's/[\/:]/./g')"
-  if [[ -n $force ]] || [ ! -e "$image_file_name" ]; then
+  if [[ -n $force ]] || [ "$image" == "$force_image" ] || [ ! -e "$image_file_name" ]; then
     echo "同步镜像：$image"
     skopeo copy --all --dest-creds ${ALIYUN_REGISTRY_USER}:${ALIYUN_REGISTRY_PASSWORD} \
       docker://${image} \

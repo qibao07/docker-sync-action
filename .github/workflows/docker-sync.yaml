@@ -2,6 +2,11 @@ name: docker-sync
 
 on:
   workflow_dispatch:
+    inputs:
+      force_image:
+        description: '强制更新镜像名称'
+        required: false
+        default: ''
   schedule:
     - cron: '0 0 * * *'
 
@@ -26,4 +31,4 @@ jobs:
         ALIYUN_NAME_SPACE: ${{ secrets.ALIYUN_NAME_SPACE }}
       uses: qibao07/skopeo-action@main
       with:
-        cmd: chmod +x ./start.sh && ./start.sh
+        cmd: chmod +x ./start.sh && ./start.sh '${{ github.event.inputs.force_image }}'

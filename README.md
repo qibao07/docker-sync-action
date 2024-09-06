@@ -13,6 +13,8 @@
 
 需要同步的镜像填写到`images.txt`即可，默认每日凌晨同步一次，也可以手动触发。
 
+(提示)images.txt最后保留换行，否则无法识别最后一行。
+
 ```
 # 强制同步
 hello-world:latest force

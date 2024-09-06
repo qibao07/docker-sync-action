@@ -13,7 +13,6 @@
 
 需要同步的镜像填写到`images.txt`即可，默认每日凌晨同步一次，也可以手动触发。
 
-(提示)images.txt最后保留换行，否则无法识别最后一行。
 
 ```
 # 强制同步
@@ -22,6 +21,9 @@ hello-world:latest force
 metacubex/mihomo:latest
 ```
 
+**注意：`images.txt`最后保留换行，否则无法识别最后一行。**
+
 ## 参考
 
 [tech-shrimp/docker_image_pusher](https://github.com/tech-shrimp/docker_image_pusher)
+

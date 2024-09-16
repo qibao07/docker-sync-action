@@ -6,3 +6,4 @@ haishanh/yacd:latest
 mariadb:10.11.8
 #nextcloud:27.1.11
 maven:3.9.9-eclipse-temurin-8
+chenweiwen/aliyun-ddns-springboot:latest

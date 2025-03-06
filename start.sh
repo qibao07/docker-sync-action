@@ -28,7 +28,7 @@ function syncImage() {
   fi
 }
 
-fi [[ -n "$force_image" ]]; then
+if [[ -n "$force_image" ]]; then
   syncImage "$image" "1"
   exit 0
 fi

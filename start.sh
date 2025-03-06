@@ -29,7 +29,7 @@ function syncImage() {
 }
 
 if [[ -n "$force_image" ]]; then
-  syncImage "$image" "1"
+  syncImage "$force_image" "1"
   exit 0
 fi
 

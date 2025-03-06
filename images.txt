@@ -13,3 +13,4 @@ chenweiwen/yacd-meta-docker:latest
 metabase/metabase:latest
 redis:6.2.4
 neilpang/acme.sh:3.0.7
+python:3.13-slim

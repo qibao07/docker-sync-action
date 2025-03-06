@@ -30,6 +30,7 @@ function syncImage() {
 
 fi [[ -n "$force_image" ]]; then
   syncImage "$image" "1"
+  exit 0
 fi
 
 while IFS= read -r line

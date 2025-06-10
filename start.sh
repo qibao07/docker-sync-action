@@ -17,7 +17,7 @@ function syncImage() {
   # 2. 手动触发参数指定
   # 3. 缓存未标记完成
   # 4. 缓存标记但digest发生变化
-  if [[ -n "$force" ]] || [ ! -e "$image_file_name" ] || [ "$(cat $image_file_name)" != "$image_digest" ]; then
+  if [[ "$force" == "1" ]] || [ ! -e "$image_file_name" ] || [ "$(cat $image_file_name)" != "$image_digest" ]; then
     echo "同步镜像：$image"
     skopeo copy --all --dest-creds ${ALIYUN_REGISTRY_USER}:${ALIYUN_REGISTRY_PASSWORD} \
       docker://${image} \
@@ -29,7 +29,7 @@ function syncImage() {
 }
 
 if [[ -n "$force_image" ]]; then
-  syncImage "$force_image" "1"
+  syncImage "$force_image" "0"
   exit 0
 fi
 
